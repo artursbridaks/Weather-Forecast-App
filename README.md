@@ -1,7 +1,5 @@
-<div style="width:100px; height:100px;">
+![cloud-logo-min](https://user-images.githubusercontent.com/48471924/89308421-e8e69080-d67a-11ea-8190-d66723906947.png "weather forecast cloud logo")
 
-![cloud-logo](https://user-images.githubusercontent.com/48471924/89280919-f9cedc00-d651-11ea-85aa-f032ef2f2e1e.png "Weather forecast app logo")
-</div>
 
 # 5-Day Weather Forecast App
 
