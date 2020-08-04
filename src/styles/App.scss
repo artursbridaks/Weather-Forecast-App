@@ -1,0 +1,100 @@
+* {
+  background-color: #3f51b5;
+}
+
+.content {
+  color: white;
+}
+
+.App {
+  padding-top: 2%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  min-height: 364px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0px 10px #111;
+  mix-blend-mode: difference;
+  user-select: none;
+}
+
+.header {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.week-card {
+  width: 130%;
+}
+
+.accordion {
+  width: 500px;
+  padding-top: 5%;
+  white-space: pre-wrap;
+}
+
+.card {
+  background-color: #303e9f;
+  clear: both;
+  color: white;
+  margin-bottom: 1%;
+
+  .card-header-content {
+    float: left;
+    background-color: transparent;
+
+    .weekdayName {
+      background-color: transparent;
+      padding-right: 13%;
+    }
+
+    .temperature {
+      background-color: transparent;
+      font-size: 20px;
+    }
+
+    .date {
+      background-color: transparent;
+      font-size: 12px;
+      padding-right: 12%;
+
+    }
+
+    .humidity {
+      background-color: transparent;
+      font-size: 12px;
+    }
+  }
+}
+
+.card-body {
+  background-color: #283593;
+  height: 80px;
+
+  .card-content {
+    background-color: "transparent";
+    background-color: #283593;
+    display: inline-flex;
+    padding-left: 10px;
+    white-space: pre-wrap;
+  }
+}
