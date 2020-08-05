@@ -18,12 +18,6 @@ const WeekContainer = () => {
                     .then(response => {
                         console.log(response);
 
-                        var arrayOfWeekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-                        var dateObj = new Date()
-                        var weekdayNumber = dateObj.getDay()
-                        var weekdayName = arrayOfWeekdays[weekdayNumber]
-
                         setWeatherData([
                             <div>
                                 <h4 className="header">5-DAY WEATHER FORECAST</h4>
@@ -32,7 +26,7 @@ const WeekContainer = () => {
                                     <Card style={{ backgroundColor: "#303e9f", border: "none" }}>
                                         <Accordion.Toggle className="card" as={Card.Header} eventKey="0">
                                             <div className="card-header-content">
-                                                <span className="weekdayName">{weekdayName}</span>
+                                                <span className="weekdayName"></span>
                                                 <span className="temperature">
                                                     <strong style={{ backgroundColor: "transparent" }}>
                                                         {(response.data.list[0].main.temp_max).toFixed(0)} °C
@@ -96,7 +90,7 @@ const WeekContainer = () => {
                                     <Card style={{ backgroundColor: "#303e9f", border: "none" }}>
                                         <Accordion.Toggle className="card" as={Card.Header} eventKey="1">
                                             <div className="card-header-content">
-                                                <span className="weekdayName">{"            "}</span>
+                                                <span className="weekdayName"></span>
                                                 <span className="temperature">
                                                     <strong style={{ backgroundColor: "transparent" }}>
                                                         {(response.data.list[8].main.temp_max).toFixed(0)} °C
@@ -160,7 +154,7 @@ const WeekContainer = () => {
                                     <Card style={{ backgroundColor: "#303e9f", border: "none" }}>
                                         <Accordion.Toggle className="card" as={Card.Header} eventKey="2">
                                             <div className="card-header-content">
-                                                <span className="weekdayName">{"            "}</span>
+                                                <span className="weekdayName"></span>
                                                 <span className="temperature">
                                                     <strong style={{ backgroundColor: "transparent" }}>
                                                         {(response.data.list[17].main.temp_max).toFixed(0)} °C
@@ -183,7 +177,7 @@ const WeekContainer = () => {
                                     <Card style={{ backgroundColor: "#303e9f", border: "none" }}>
                                         <Accordion.Toggle className="card" as={Card.Header} eventKey="3">
                                             <div className="card-header-content">
-                                                <span className="weekdayName">{"            "}</span>
+                                                <span className="weekdayName"></span>
                                                 <span className="temperature">
                                                     <strong style={{ backgroundColor: "transparent" }}>
                                                         {(response.data.list[26].main.temp_max).toFixed(0)} °C
@@ -206,7 +200,7 @@ const WeekContainer = () => {
                                     <Card style={{ backgroundColor: "#303e9f", border: "none" }}>
                                         <Accordion.Toggle className="card" as={Card.Header} eventKey="4">
                                             <div className="card-header-content">
-                                                <span className="weekdayName">{"            "}</span>
+                                                <span className="weekdayName"></span>
                                                 <span className="temperature">
                                                     <strong style={{ backgroundColor: "transparent" }}>
                                                         {(response.data.list[35].main.temp_max).toFixed(0)} °C

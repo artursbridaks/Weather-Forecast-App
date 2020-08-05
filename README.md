@@ -39,6 +39,8 @@ npm run build
 - [ ] Better UI
 - [ ] Implement Redux
 - [ ] Tests using Jest + Enzyme
+- [!] The main issue - wasn't able to succesfully implement API iteration due to the lack of experience within React. Will work on it until I can do it.
+
 
 ## Notes
 
