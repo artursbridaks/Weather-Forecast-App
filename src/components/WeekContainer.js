@@ -3,6 +3,7 @@ import apiConfig from '../constants/apiKeys';
 import axios from 'axios';
 import * as ReactBootStrap from 'react-bootstrap';
 import { Accordion, Card } from 'react-bootstrap';
+import HourlyTemperature from './Day/HourlyTemperature'
 
 const WeekContainer = () => {
     const [weatherData, setWeatherData] = useState(null)
@@ -44,46 +45,38 @@ const WeekContainer = () => {
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="0">
                                             <Card.Body className="card-body">
-                                                <div className="card-content">
-                                                    {(response.data.list[0].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[0].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[1].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[1].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[2].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[2].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[3].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[3].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[4].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[4].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[5].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[5].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[6].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[6].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[7].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[7].dt_txt).slice(10, 16)}
-                                                </div>
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[0].main.temp}
+                                                    datetime={response.data.list[0].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[1].main.temp}
+                                                    datetime={response.data.list[1].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[2].main.temp}
+                                                    datetime={response.data.list[2].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[3].main.temp}
+                                                    datetime={response.data.list[3].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[4].main.temp}
+                                                    datetime={response.data.list[4].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[5].main.temp}
+                                                    datetime={response.data.list[5].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[6].main.temp}
+                                                    datetime={response.data.list[6].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[7].main.temp}
+                                                    datetime={response.data.list[7].dt_txt}
+                                                />
                                             </Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
@@ -108,46 +101,38 @@ const WeekContainer = () => {
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="1">
                                             <Card.Body className="card-body">
-                                                <div className="card-content">
-                                                    {(response.data.list[9].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[9].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[10].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[10].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[11].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[11].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[12].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[12].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[13].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[13].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[14].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[14].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[15].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[15].dt_txt).slice(10, 16)}
-                                                </div>
-                                                <div className="card-content">
-                                                    {(response.data.list[16].main.temp).toFixed(0)}°C
-                                                        <br />
-                                                    {(response.data.list[16].dt_txt).slice(10, 16)}
-                                                </div>
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[9].main.temp}
+                                                    datetime={response.data.list[9].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[10].main.temp}
+                                                    datetime={response.data.list[10].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[11].main.temp}
+                                                    datetime={response.data.list[11].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[12].main.temp}
+                                                    datetime={response.data.list[12].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[13].main.temp}
+                                                    datetime={response.data.list[13].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[14].main.temp}
+                                                    datetime={response.data.list[14].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[15].main.temp}
+                                                    datetime={response.data.list[15].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[16].main.temp}
+                                                    datetime={response.data.list[16].dt_txt}
+                                                />
                                             </Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
@@ -171,7 +156,40 @@ const WeekContainer = () => {
                                             </div>
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="2">
-                                            <Card.Body>Data from the day</Card.Body>
+                                            <Card.Body>
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[18].main.temp}
+                                                    datetime={response.data.list[18].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[19].main.temp}
+                                                    datetime={response.data.list[19].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[20].main.temp}
+                                                    datetime={response.data.list[20].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[21].main.temp}
+                                                    datetime={response.data.list[21].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[22].main.temp}
+                                                    datetime={response.data.list[22].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[23].main.temp}
+                                                    datetime={response.data.list[23].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[24].main.temp}
+                                                    datetime={response.data.list[24].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[25].main.temp}
+                                                    datetime={response.data.list[25].dt_txt}
+                                                />
+                                            </Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
                                     <Card style={{ backgroundColor: "#303e9f", border: "none" }}>
@@ -194,7 +212,40 @@ const WeekContainer = () => {
                                             </div>
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="3">
-                                            <Card.Body>Data from the next day</Card.Body>
+                                            <Card.Body>
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[27].main.temp}
+                                                    datetime={response.data.list[27].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[28].main.temp}
+                                                    datetime={response.data.list[28].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[29].main.temp}
+                                                    datetime={response.data.list[29].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[30].main.temp}
+                                                    datetime={response.data.list[30].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[31].main.temp}
+                                                    datetime={response.data.list[31].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[32].main.temp}
+                                                    datetime={response.data.list[32].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[33].main.temp}
+                                                    datetime={response.data.list[33].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[34].main.temp}
+                                                    datetime={response.data.list[34].dt_txt}
+                                                />
+                                            </Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
                                     <Card style={{ backgroundColor: "#303e9f", border: "none" }}>
@@ -217,7 +268,25 @@ const WeekContainer = () => {
                                             </div>
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="4">
-                                            <Card.Body>Data from another day</Card.Body>
+                                            <Card.Body>
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[36].main.temp}
+                                                    datetime={response.data.list[36].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[37].main.temp}
+                                                    datetime={response.data.list[37].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[38].main.temp}
+                                                    datetime={response.data.list[38].dt_txt}
+                                                />
+                                                <HourlyTemperature
+                                                    temperature={response.data.list[39].main.temp}
+                                                    datetime={response.data.list[39].dt_txt}
+                                                />
+
+                                            </Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
                                 </Accordion>
@@ -264,46 +333,38 @@ const WeekContainer = () => {
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
                                                 <Card.Body className="card-body">
-                                                    <div className="card-content">
-                                                        {(response.data.list[0].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[0].dt_txt).slice(10, 16)}
-                                                    </div>
-                                                    <div className="card-content">
-                                                        {(response.data.list[1].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[1].dt_txt).slice(10, 16)}
-                                                    </div>
-                                                    <div className="card-content">
-                                                        {(response.data.list[2].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[2].dt_txt).slice(10, 16)}
-                                                    </div>
-                                                    <div className="card-content">
-                                                        {(response.data.list[3].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[3].dt_txt).slice(10, 16)}
-                                                    </div>
-                                                    <div className="card-content">
-                                                        {(response.data.list[4].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[4].dt_txt).slice(10, 16)}
-                                                    </div>
-                                                    <div className="card-content">
-                                                        {(response.data.list[5].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[5].dt_txt).slice(10, 16)}
-                                                    </div>
-                                                    <div className="card-content">
-                                                        {(response.data.list[6].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[6].dt_txt).slice(10, 16)}
-                                                    </div>
-                                                    <div className="card-content">
-                                                        {(response.data.list[7].main.temp).toFixed(0)}°C
-                                                            <br />
-                                                        {(response.data.list[7].dt_txt).slice(10, 16)}
-                                                    </div>
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[0].main.temp}
+                                                        datetime={response.data.list[0].dt_txt}
+                                                    />
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[1].main.temp}
+                                                        datetime={response.data.list[1].dt_txt}
+                                                    />
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[2].main.temp}
+                                                        datetime={response.data.list[2].dt_txt}
+                                                    />
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[3].main.temp}
+                                                        datetime={response.data.list[3].dt_txt}
+                                                    />
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[4].main.temp}
+                                                        datetime={response.data.list[4].dt_txt}
+                                                    />
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[5].main.temp}
+                                                        datetime={response.data.list[5].dt_txt}
+                                                    />
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[6].main.temp}
+                                                        datetime={response.data.list[6].dt_txt}
+                                                    />
+                                                    <HourlyTemperature
+                                                        temperature={response.data.list[7].main.temp}
+                                                        datetime={response.data.list[7].dt_txt}
+                                                    />
                                                 </Card.Body>
                                             </Accordion.Collapse>
                                         </Card>
